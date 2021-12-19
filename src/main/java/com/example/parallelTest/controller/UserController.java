@@ -25,12 +25,12 @@ public class UserController {
         this.userService = userService;
     }
 
-    @GetMapping("user")
+    @GetMapping("/user")
     public ResponseEntity<List<User>> getUser() {
         return ResponseEntity.ok(userService.getUsers());
     }
 
-    @PostMapping("user")
+    @PostMapping("/user")
     public ResponseEntity<EmptyResponse> createUser(createUserRequest req) {
         userService.createUser(req.getName(),req.getPassword());
         return ResponseEntity.ok(new EmptyResponse());
