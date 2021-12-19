@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f703517d-59ec-42c8-b6f0-bbb396e93c92" name="Changes" comment="マイグレートされない問題（途中）">
+    <list default="true" id="f703517d-59ec-42c8-b6f0-bbb396e93c92" name="Changes" comment="マイグレートされない問題解決">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V0_0_1__新規.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V0_0_1__新規.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/parallelTest/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/parallelTest/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/parallelTest/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/parallelTest/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/parallelTest/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/parallelTest/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,7 +166,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639900798193</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="マイグレートされない問題解決">
+      <created>1639915097807</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1639915097807</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -275,7 +284,8 @@
     <MESSAGE value="flyway導入" />
     <MESSAGE value="新規ファイル追加" />
     <MESSAGE value="マイグレートされない問題（途中）" />
-    <option name="LAST_COMMIT_MESSAGE" value="マイグレートされない問題（途中）" />
+    <MESSAGE value="マイグレートされない問題解決" />
+    <option name="LAST_COMMIT_MESSAGE" value="マイグレートされない問題解決" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -284,11 +294,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/example/parallelTest/service/UserService.java</url>
           <line>23</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/parallelTest/service/UserService.java</url>
-          <line>22</line>
-          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

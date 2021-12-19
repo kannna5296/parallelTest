@@ -10,6 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import java.sql.Timestamp;
 
 @Entity
 @Getter
@@ -29,8 +30,8 @@ public class User {
     private String password;
 
     @Column(name = "created_at", nullable = false)
-    private DateTime createdAt;
+    private Timestamp createdAt;
 
     @Column(name = "updated_at", nullable = false)
-    private DateTime updatedAt;
+    private Timestamp updatedAt;
 }

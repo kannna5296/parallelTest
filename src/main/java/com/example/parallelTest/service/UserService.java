@@ -2,7 +2,8 @@ package com.example.parallelTest.service;
 
 import com.example.parallelTest.entity.User;
 import com.example.parallelTest.repository.UserRepository;
-import org.joda.time.DateTime;
+
+import java.sql.Timestamp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,7 +21,6 @@ public class UserService {
     }
 
     public List<User> getUsers() {
-        User user = userRepository.findById(1).get();
         List<User> users = userRepository.findAll();
         return users;
     }
@@ -29,9 +29,9 @@ public class UserService {
         User user = new User();
         user.setName(name);
         user.setPassword(password);
-        DateTime date = new DateTime();
-        user.setCreatedAt(date);
-        user.setUpdatedAt(date);
+        Timestamp now = new Timestamp(System.currentTimeMillis());
+        user.setCreatedAt(now);
+        user.setUpdatedAt(now);
         userRepository.save(user);
     }
 }

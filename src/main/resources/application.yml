@@ -1,7 +1,7 @@
 spring:
   datasource:
     driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
-    url: jdbc:sqlserver://localhost:1433;loginTimeout=30;socketTimeout=30000
+    url: jdbc:sqlserver://localhost:1433;databaseName=test;loginTimeout=30;socketTimeout=30000
     username: sa
     password: passWord567
     type: com.zaxxer.hikari.HikariDataSource
