@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:sqlserver://localhost:1433;loginTimeout=30;socketTimeout=30
+    username: sa
+    password: passWord123
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      leakDetectionThreshold: 100000
+      connectionTimeout: 100000
+      maximumPoolSize: 5
+      minimumIdle: 10
+      connectionTestQuery: SELECT 1
+      connectionInitSql: SET XACT_ABORT ON
+    jmx:
+      enabled: true
+    jpa:
+      database-platform: org.hibernate.dialect.SQLServer2012Dialect
