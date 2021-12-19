@@ -35,6 +35,9 @@ dependencies {
 //	classpath 'org.flywaydb:flyway-gradle-plugin:6.2.2'
 //	/*MySQL5.7に対応してそうなバージョンをググッて適当に設定*/
 //	classpath 'mysql:mysql-connector-java:5.1.45'
+	testImplementation('junit:junit:4.13')
+	// https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
+	implementation 'com.fasterxml.jackson.core:jackson-databind:2.0.1'
 }
 
 test {
