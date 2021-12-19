@@ -20,7 +20,9 @@ public class UserService {
     }
 
     public List<User> getUsers() {
-        return userRepository.findAll();
+        User user = userRepository.findById(1).get();
+        List<User> users = userRepository.findAll();
+        return users;
     }
 
     public void createUser(String name, String password) {

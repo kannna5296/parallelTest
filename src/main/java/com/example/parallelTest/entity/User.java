@@ -14,7 +14,7 @@ import javax.persistence.GenerationType;
 @Entity
 @Getter
 @Setter
-@Table(name = "user")
+@Table(name = "app_user")
 public class User {
 
     @Id

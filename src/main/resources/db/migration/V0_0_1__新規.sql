@@ -1,4 +1,4 @@
-CREATE TABLE [dbo].[user](
+CREATE TABLE [dbo].[app_user](
 [id] [int] IDENTITY(1,1) NOT NULL,
 [name] [nvarchar](50) NOT NULL,
 [password] [nvarchar](50) NOT NULL,

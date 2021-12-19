@@ -4,18 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f703517d-59ec-42c8-b6f0-bbb396e93c92" name="Changes" comment="localDBパス修正">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/migrate/parallelTest.migrate.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/migrate/parallelTest.migrate.main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/migrate/parallelTest.migrate.test.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/parallelTest/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/parallelTest/controller/UserController.java" afterDir="false" />
+    <list default="true" id="f703517d-59ec-42c8-b6f0-bbb396e93c92" name="Changes" comment="新規ファイル追加">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/parallelTest/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/parallelTest/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -80,6 +71,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/5.3.13/b5a502f2450a025b5fe3508457688fd3037d4721/spring-web-5.3.13-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="ProjectId" id="22UarTyhvETvOUNsivvUjkLxxGa" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -94,6 +88,9 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
+  </component>
+  <component name="ReaderModeSettings">
+    <option name="enabled" value="false" />
   </component>
   <component name="RunManager">
     <configuration name="parallelTest [bootRun]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -146,7 +143,21 @@
       <option name="project" value="LOCAL" />
       <updated>1639894996974</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="flyway導入">
+      <created>1639898859436</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1639898859436</updated>
+    </task>
+    <task id="LOCAL-00004" summary="新規ファイル追加">
+      <created>1639898873022</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1639898873022</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -254,6 +265,24 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="初回" />
     <MESSAGE value="localDBパス修正" />
-    <option name="LAST_COMMIT_MESSAGE" value="localDBパス修正" />
+    <MESSAGE value="flyway導入" />
+    <MESSAGE value="新規ファイル追加" />
+    <option name="LAST_COMMIT_MESSAGE" value="新規ファイル追加" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/parallelTest/service/UserService.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/parallelTest/service/UserService.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
