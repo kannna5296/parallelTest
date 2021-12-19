@@ -52,7 +52,7 @@ task createDb(type: Exec) {
 
 flyway {
 	/*さっきMySQLで準備したやつ*/
-	url = 'jdbc:sqlserver://localhost:1433;loginTimeout=30;socketTimeout=30000'
+	url = 'jdbc:sqlserver://localhost:1433;databaseName=test;loginTimeout=30;socketTimeout=30000'
 	user = db_user
 	password = db_password
 }
