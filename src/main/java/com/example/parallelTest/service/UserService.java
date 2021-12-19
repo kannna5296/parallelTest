@@ -42,4 +42,8 @@ public class UserService {
         user.setUpdatedAt(now);
         userRepository.save(user);
     }
+
+    public void deleteUser(Integer id) {
+        userRepository.deleteById(id);
+    }
 }

@@ -44,4 +44,11 @@ public class UserController {
         userService.updateUser(req.getId(), req.getNewName());
         return ResponseEntity.ok(new EmptyResponse());
     }
+
+    //DELETE
+    @DeleteMapping("/user")
+    public ResponseEntity<EmptyResponse> delteUser(updateUserRequest req) {
+        userService.deleteUser(req.getId());
+        return ResponseEntity.ok(new EmptyResponse());
+    }
 }
