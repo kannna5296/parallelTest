@@ -34,4 +34,12 @@ public class UserService {
         user.setUpdatedAt(now);
         userRepository.save(user);
     }
+
+    public void updateUser(Integer id, String newName) {
+        User user = userRepository.findById(id).get();
+        user.setName(newName);
+        Timestamp now = new Timestamp(System.currentTimeMillis());
+        user.setUpdatedAt(now);
+        userRepository.save(user);
+    }
 }
