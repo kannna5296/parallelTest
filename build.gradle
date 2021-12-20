@@ -38,6 +38,15 @@ dependencies {
 	testImplementation('junit:junit:4.13')
 	// https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
 	implementation 'com.fasterxml.jackson.core:jackson-databind:2.0.1'
+
+	// https://mvnrepository.com/artifact/com.ninja-squad/DbSetup
+	implementation 'com.ninja-squad:DbSetup:2.1.0'
+    // https://mvnrepository.com/artifact/com.github.springtestdbunit/spring-test-dbunit
+	testImplementation 'com.github.springtestdbunit:spring-test-dbunit:1.3.0'
+	// https://mvnrepository.com/artifact/org.dbunit/dbunit
+	testImplementation 'org.dbunit:dbunit:2.7.2'
+	testCompileOnly("com.github.springtestdbunit:spring-test-dbunit:1.3.0")
+
 }
 
 test {
