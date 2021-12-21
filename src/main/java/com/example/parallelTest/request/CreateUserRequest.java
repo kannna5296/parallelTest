@@ -11,7 +11,7 @@ import javax.persistence.Access;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class createUserRequest {
+public class CreateUserRequest {
 
     private String name;
 
