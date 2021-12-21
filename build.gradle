@@ -40,6 +40,7 @@ dependencies {
 	implementation 'com.fasterxml.jackson.core:jackson-databind:2.11.2'
 	implementation 'com.fasterxml.jackson.core:jackson-core:2.11.2'
 	implementation 'com.fasterxml.jackson.core:jackson-annotations:2.11.2'
+	implementation'org.assertj:assertj-db:1.2.0'
 
 //	// https://mvnrepository.com/artifact/com.ninja-squad/DbSetup
 //	implementation 'com.ninja-squad:DbSetup:2.1.0'
