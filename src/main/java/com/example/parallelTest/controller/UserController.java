@@ -29,14 +29,14 @@ public class UserController {
 
     //CREATE
     @PostMapping("/user")
-    public ResponseEntity<EmptyResponse> createUser(@RequestBody CreateUserRequest req) {
+    public ResponseEntity<EmptyResponse> createUser(@RequestBody CreateUserRequest req) throws Exception{
         userApplicationService.createUser(req.getName(),req.getPassword());
         return ResponseEntity.ok(new EmptyResponse());
     }
 
     //UPDATE
     @PutMapping("/user")
-    public ResponseEntity<EmptyResponse> createUser(@RequestBody UpdateUserRequest req) {
+    public ResponseEntity<EmptyResponse> createUser(@RequestBody UpdateUserRequest req) throws Exception{
         userApplicationService.updateUser(req.getId(), req.getNewName());
         return ResponseEntity.ok(new EmptyResponse());
     }

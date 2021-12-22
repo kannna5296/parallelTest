@@ -30,9 +30,9 @@ public class UserApplicationServiceImpl implements UserApplicationService {
 
     public void createUser(String name, String password) throws Exception {
 
-        if (userService.exists(name)) {
-            throw new Exception();
-        };
+        // 重複チェック
+        if (userService.exists(name)) throw new Exception();
+
         User user = new User();
         user.setName(name);
         user.setPassword(password);
@@ -42,7 +42,11 @@ public class UserApplicationServiceImpl implements UserApplicationService {
         userRepository.save(user);
     }
 
-    public void updateUser(Integer id, String newName) {
+    public void updateUser(Integer id, String newName) throws Exception {
+
+        // 重複チェック
+        if (userService.exists(newName)) throw new Exception();
+
         User user = userRepository.findById(id).get();
         user.setName(newName);
         Timestamp now = new Timestamp(System.currentTimeMillis());

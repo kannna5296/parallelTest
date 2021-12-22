@@ -15,7 +15,7 @@ public interface UserApplicationService {
 
     public void createUser(String name, String password) throws Exception;
 
-    public void updateUser(Integer id, String newName);
+    public void updateUser(Integer id, String newName) throws Exception;
 
     public void deleteUser(Integer id);
 }
