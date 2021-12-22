@@ -24,6 +24,6 @@ public class UserService {
     // すでに居るユーザを検知
     public boolean exists(String name) {
         User dupUser = userRepository.findByName(name);
-        return dupUser == null;
+        return dupUser != null;
     }
 }
