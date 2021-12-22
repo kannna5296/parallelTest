@@ -2,6 +2,7 @@ package com.example.parallelTest.applicationService.impl;
 
 import com.example.parallelTest.entity.User;
 import com.example.parallelTest.entity.UserService;
+import com.example.parallelTest.exception.NotValidException;
 import com.example.parallelTest.repository.UserRepository;
 import com.example.parallelTest.applicationService.UserApplicationService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,7 +32,7 @@ public class UserApplicationServiceImpl implements UserApplicationService {
     public void createUser(String name, String password) throws Exception {
 
         // 重複チェック
-        if (userService.exists(name)) throw new Exception();
+        if (userService.exists(name)) throw new NotValidException();
 
         User user = new User();
         user.setName(name);
@@ -45,7 +46,7 @@ public class UserApplicationServiceImpl implements UserApplicationService {
     public void updateUser(Integer id, String newName) throws Exception {
 
         // 重複チェック
-        if (userService.exists(newName)) throw new Exception();
+        if (userService.exists(newName)) throw new NotValidException();
 
         User user = userRepository.findById(id).get();
         user.setName(newName);
