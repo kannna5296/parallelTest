@@ -31,11 +31,7 @@ dependencies {
 	implementation 'joda-time:joda-time:2.3'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.flywaydb:flyway-core'
-//	/*flywayのバージョンが古いとgradleのバージョンに対応してない(？)みたいで動かず、ひとまず最新に*/
-//	classpath 'org.flywaydb:flyway-gradle-plugin:6.2.2'
-//	/*MySQL5.7に対応してそうなバージョンをググッて適当に設定*/
-//	classpath 'mysql:mysql-connector-java:5.1.45'
-	testImplementation('junit:junit:4.13')
+	testImplementation 'org.junit.jupiter:junit-jupiter:5.5.2'
 	// https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
 	implementation 'com.fasterxml.jackson.core:jackson-databind:2.11.2'
 	implementation 'com.fasterxml.jackson.core:jackson-core:2.11.2'
