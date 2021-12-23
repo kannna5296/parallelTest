@@ -17,13 +17,13 @@ stages:
     - task: Bash@3
       displayName: A
       inputs:
-        targetType: 'filePath'
+        targetType: 'inline'
         script: |
           echo "checking dateAAAA"
     - task: Bash@3
       displayName: B
       inputs:
-        targetType: 'filePath'
+        targetType: 'inline'
         script: |
           echo "checking dateBBBB"
 
