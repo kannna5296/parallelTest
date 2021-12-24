@@ -1,8 +1,3 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
-
 trigger:
 - main
 
@@ -14,21 +9,43 @@ stages:
   - job: job1
     displayName: job1
     steps:
-    - task: Bash@3
-      displayName: A
+    - task: DockerCompose@0
+      displayName: create SQLServer
       inputs:
-        targetType: 'inline'
-        script: |
-          echo "checking dateAAAA"
-    - task: Bash@3
-      displayName: B
+        dockerComposeFile: '$(Build.SourcesDirectory)/parallelTest/docker-compose.yml'
+        qualifyImageNames: false
+        dockerComposeCommand: 'up -d'
+    - task: Gradle@2
+      displayName: createDb
       inputs:
-        targetType: 'inline'
-        script: |
-          echo "checking dateBBBB"
-
-#
-#- script: |
-#    echo Add other tasks to build, test, and deploy your project.
-#    echo See https://aka.ms/yaml
-#  displayName: 'Run a multi-line script'
+        workingDirectory: $(Build.SourcesDirectory)/parallelTest/
+        gradleWrapperFile: $(Build.SourcesDirectory)/parallelTest/gradlew
+        gradleOptions: '-Xmx3072m'
+        javaHomeOption: 'JDKVersion'
+        jdkVersionOption: '1.8'
+        jdkArchitectureOption: 'x64'
+        publishJUnitResults: false
+        tasks: 'createDb'
+    - task: Gradle@2
+      displayName: migrateDb
+      inputs:
+        workingDirectory: $(Build.SourcesDirectory)/parallelTest/
+        gradleWrapperFile: $(Build.SourcesDirectory)/parallelTest/gradlew
+        gradleOptions: '-Xmx3072m'
+        javaHomeOption: 'JDKVersion'
+        jdkVersionOption: '1.8'
+        jdkArchitectureOption: 'x64'
+        publishJUnitResults: false
+        tasks: '--continue flywayInfo flywayMigrate'
+    - task: Gradle@2
+      displayName: test
+      inputs:
+        workingDirectory: $(Build.SourcesDirectory)/parallelTest/
+        gradleWrapperFile: $(Build.SourcesDirectory)/parallelTest/gradlew
+        gradleOptions: '-Xmx3072m'
+        javaHomeOption: 'JDKVersion'
+        jdkVersionOption: '1.8'
+        jdkArchitectureOption: 'x64'
+        publishJUnitResults: false
+        testResultsFiles: '**/TEST-*.xml'
+        tasks: 'test'
