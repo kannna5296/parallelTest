@@ -12,7 +12,7 @@ stages:
     - task: DockerCompose@0
       displayName: create SQLServer
       inputs:
-        dockerComposeFile: '$(Build.SourcesDirectory)/parallelTest/docker-compose.yml'
+        dockerComposeFile: '$(Build.SourcesDirectory)/docker-compose.yml'
         qualifyImageNames: false
         dockerComposeCommand: 'up -d'
     - task: Gradle@2
