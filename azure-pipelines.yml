@@ -18,8 +18,8 @@ stages:
     - task: Gradle@2
       displayName: createDb
       inputs:
-        workingDirectory: $(Build.SourcesDirectory)/parallelTest/
-        gradleWrapperFile: $(Build.SourcesDirectory)/parallelTest/gradlew
+        workingDirectory: $(Build.SourcesDirectory)
+        gradleWrapperFile: $(Build.SourcesDirectory)/gradlew
         gradleOptions: '-Xmx3072m'
         javaHomeOption: 'JDKVersion'
         jdkVersionOption: '1.8'
@@ -29,8 +29,8 @@ stages:
     - task: Gradle@2
       displayName: migrateDb
       inputs:
-        workingDirectory: $(Build.SourcesDirectory)/parallelTest/
-        gradleWrapperFile: $(Build.SourcesDirectory)/parallelTest/gradlew
+        workingDirectory: $(Build.SourcesDirectory)
+        gradleWrapperFile: $(Build.SourcesDirectory)/gradlew
         gradleOptions: '-Xmx3072m'
         javaHomeOption: 'JDKVersion'
         jdkVersionOption: '1.8'
@@ -40,8 +40,8 @@ stages:
     - task: Gradle@2
       displayName: test
       inputs:
-        workingDirectory: $(Build.SourcesDirectory)/parallelTest/
-        gradleWrapperFile: $(Build.SourcesDirectory)/parallelTest/gradlew
+        workingDirectory: $(Build.SourcesDirectory)
+        gradleWrapperFile: $(Build.SourcesDirectory)/gradlew
         gradleOptions: '-Xmx3072m'
         javaHomeOption: 'JDKVersion'
         jdkVersionOption: '1.8'
