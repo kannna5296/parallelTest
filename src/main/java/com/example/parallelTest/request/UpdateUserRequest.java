@@ -11,7 +11,7 @@ import lombok.Setter;
 @AllArgsConstructor
 public class UpdateUserRequest {
 
-    private Integer id;
+  private Integer id;
 
-    private String newName;
+  private String newName;
 }

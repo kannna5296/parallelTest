@@ -5,15 +5,13 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Access;
-
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 public class CreateUserRequest {
 
-    private String name;
+  private String name;
 
-    private String password;
+  private String password;
 }
