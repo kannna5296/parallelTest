@@ -1,16 +1,14 @@
 package com.example.parallelTest.entity;
 
-import lombok.Getter;
-import lombok.Setter;
-import org.joda.time.DateTime;
-
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.Id;
+import java.sql.Timestamp;
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
-import java.sql.Timestamp;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
 @Getter
@@ -18,20 +16,20 @@ import java.sql.Timestamp;
 @Table(name = "app_user")
 public class User {
 
-    @Id
-    @Column(name = "id", nullable = false)
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+  @Id
+  @Column(name = "id", nullable = false)
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Integer id;
 
-    @Column(name = "name", nullable = false)
-    private String name;
+  @Column(name = "name", nullable = false)
+  private String name;
 
-    @Column(name = "password", nullable = false)
-    private String password;
+  @Column(name = "password", nullable = false)
+  private String password;
 
-    @Column(name = "created_at", nullable = false)
-    private Timestamp createdAt;
+  @Column(name = "created_at", nullable = false)
+  private Timestamp createdAt;
 
-    @Column(name = "updated_at", nullable = false)
-    private Timestamp updatedAt;
+  @Column(name = "updated_at", nullable = false)
+  private Timestamp updatedAt;
 }
