@@ -10,7 +10,7 @@ public interface UserApplicationService {
 
   public List<User> getUsers();
 
-  public void createUser(String name, String password) throws Exception;
+  public User createUser(String name, String password) throws Exception;
 
   public void updateUser(Integer id, String newName) throws Exception;
 

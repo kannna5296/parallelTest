@@ -30,7 +30,7 @@ public class UserApplicationServiceImpl implements UserApplicationService {
     return users;
   }
 
-  public void createUser(String name, String password) throws Exception {
+  public User createUser(String name, String password) throws Exception {
 
     // 重複チェック
     if (userService.exists(name)) throw new NotValidException();
@@ -42,6 +42,7 @@ public class UserApplicationServiceImpl implements UserApplicationService {
     user.setCreatedAt(now);
     user.setUpdatedAt(now);
     userRepository.save(user);
+    return user;
   }
 
   public void updateUser(Integer id, String newName) throws Exception {
