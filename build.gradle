@@ -51,8 +51,8 @@ dependencies {
 
 	//こいつらのバージョンが鬼門
 	// XlsDataSet内で使用
-	implementation group: 'org.apache.poi', name: 'poi', version: '5.1.0'
-	implementation group: 'org.apache.poi', name: 'poi-ooxml', version: '5.1.0'
+	implementation group: 'org.apache.poi', name: 'poi', version: '3.14'
+	implementation group: 'org.apache.poi', name: 'poi-ooxml', version: '3.14'
 	implementation group: 'org.apache.poi', name: 'poi-ooxml-schemas', version: '3.17'
 
 //	// https://mvnrepository.com/artifact/com.ninja-squad/DbSetup
