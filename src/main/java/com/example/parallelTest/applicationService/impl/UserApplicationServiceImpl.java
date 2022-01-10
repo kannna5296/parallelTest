@@ -7,6 +7,8 @@ import com.example.parallelTest.exception.NotValidException;
 import com.example.parallelTest.repository.UserRepository;
 import java.sql.Timestamp;
 import java.util.List;
+
+import org.joda.time.DateTime;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -36,7 +38,7 @@ public class UserApplicationServiceImpl implements UserApplicationService {
     User user = new User();
     user.setName(name);
     user.setPassword(password);
-    Timestamp now = new Timestamp(System.currentTimeMillis());
+    DateTime now = new DateTime();
     user.setCreatedAt(now);
     user.setUpdatedAt(now);
     userRepository.save(user);
@@ -49,7 +51,7 @@ public class UserApplicationServiceImpl implements UserApplicationService {
 
     User user = userRepository.findById(id).get();
     user.setName(newName);
-    Timestamp now = new Timestamp(System.currentTimeMillis());
+    DateTime now = new DateTime();
     user.setUpdatedAt(now);
     userRepository.save(user);
   }
