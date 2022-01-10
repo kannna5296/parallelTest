@@ -7,7 +7,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import com.github.springtestdbunit.TransactionDbUnitTestExecutionListener;
-import com.github.springtestdbunit.annotation.DatabaseOperation;
 import com.github.springtestdbunit.annotation.DatabaseSetup;
 
 import com.example.parallelTest.request.CreateUserRequest;
@@ -32,7 +31,8 @@ import org.springframework.web.context.WebApplicationContext;
 
 @SpringBootTest
 @DbUnitConfiguration(
-        dataSetLoader = XlsDataSetLoader.class
+        dataSetLoader = XlsDataSetLoader.class,
+        databaseOperationLookup = CustomDatabaseOperationLookup.class
 )
 @TestExecutionListeners({
         DependencyInjectionTestExecutionListener.class,
