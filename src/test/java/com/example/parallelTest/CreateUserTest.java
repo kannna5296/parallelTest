@@ -13,6 +13,7 @@ import com.github.springtestdbunit.annotation.DatabaseSetup;
 import com.example.parallelTest.request.CreateUserRequest;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.springtestdbunit.annotation.DbUnitConfiguration;
+import com.github.springtestdbunit.operation.MicrosoftSqlDatabaseOperationLookup;
 import org.assertj.db.type.Changes;
 import org.assertj.db.type.Source;
 import org.assertj.db.type.Table;
@@ -33,7 +34,7 @@ import org.springframework.web.context.WebApplicationContext;
 @SpringBootTest
 @DbUnitConfiguration(
         dataSetLoader = XlsDataSetLoader.class,
-        databaseOperationLookup = CustomDatabaseOperationLookup.class
+        databaseOperationLookup = MicrosoftSqlDatabaseOperationLookup.class
 )
 @TestExecutionListeners({
         DbUnitTestExecutionListener.class
