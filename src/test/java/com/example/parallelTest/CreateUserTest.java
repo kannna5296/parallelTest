@@ -37,7 +37,8 @@ import org.springframework.web.context.WebApplicationContext;
         databaseOperationLookup = MicrosoftSqlDatabaseOperationLookup.class
 )
 @TestExecutionListeners({
-        DbUnitTestExecutionListener.class
+        DbUnitTestExecutionListener.class,
+        DependencyInjectionTestExecutionListener.class
 })
 class CreateUserTest {
 
