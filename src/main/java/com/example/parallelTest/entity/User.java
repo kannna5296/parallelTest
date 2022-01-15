@@ -9,6 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
+import org.joda.time.DateTime;
 
 @Entity
 @Getter
@@ -28,8 +29,8 @@ public class User {
   private String password;
 
   @Column(name = "created_at", nullable = false)
-  private Timestamp createdAt;
+  private DateTime createdAt;
 
   @Column(name = "updated_at", nullable = false)
-  private Timestamp updatedAt;
+  private DateTime updatedAt;
 }

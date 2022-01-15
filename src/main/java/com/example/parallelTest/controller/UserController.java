@@ -4,6 +4,7 @@ import com.example.parallelTest.applicationService.UserApplicationService;
 import com.example.parallelTest.entity.User;
 import com.example.parallelTest.request.CreateUserRequest;
 import com.example.parallelTest.request.UpdateUserRequest;
+import com.example.parallelTest.response.CreateUserResponse;
 import com.example.parallelTest.response.EmptyResponse;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,10 +29,10 @@ public class UserController {
 
   // CREATE
   @PostMapping("/user")
-  public ResponseEntity<EmptyResponse> createUser(@RequestBody CreateUserRequest req)
+  public ResponseEntity<CreateUserResponse> createUser(@RequestBody CreateUserRequest req)
       throws Exception {
-    userApplicationService.createUser(req.getName(), req.getPassword());
-    return ResponseEntity.ok(new EmptyResponse());
+    User user = userApplicationService.createUser(req.getName(), req.getPassword());
+    return ResponseEntity.ok(new CreateUserResponse(user));
   }
 
   // UPDATE
