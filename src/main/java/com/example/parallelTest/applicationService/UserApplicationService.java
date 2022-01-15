@@ -5,7 +5,6 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 // アプリケーションサービス
-@Service
 public interface UserApplicationService {
 
   public List<User> getUsers();
