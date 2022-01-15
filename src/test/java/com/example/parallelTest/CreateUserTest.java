@@ -38,7 +38,10 @@ import org.springframework.web.context.WebApplicationContext;
 )
 @TestExecutionListeners({
         DbUnitTestExecutionListener.class,
-        DependencyInjectionTestExecutionListener.class
+        DependencyInjectionTestExecutionListener.class,
+        SqlScriptsTestExecutionListener.class,
+        DirtiesContextTestExecutionListener.class,
+        TransactionDbUnitTestExecutionListener.class
 })
 class CreateUserTest {
 
