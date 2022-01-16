@@ -1,6 +1,8 @@
 package com.example.parallelTest;
 
 import static com.github.springtestdbunit.annotation.DatabaseOperation.CLEAN_INSERT;
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.log;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -13,6 +15,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.springtestdbunit.annotation.DbUnitConfiguration;
 import com.github.springtestdbunit.operation.MicrosoftSqlDatabaseOperationLookup;
 import org.assertj.db.type.Source;
+import org.json.JSONArray;
 import org.json.JSONObject;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -26,8 +29,6 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.ResultActions;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
-
-import javax.transaction.Transactional;
 
 @SpringBootTest
 @DbUnitConfiguration(
@@ -85,14 +86,14 @@ class ReadUserTest {
                     .andDo(log());
 
     String responseString = results.andReturn().getResponse().getContentAsString();
-    //JSONObject result = new JSONObject(responseString);
-    String a  ="ss";
+    JSONObject result = new JSONObject(responseString);
+    JSONArray array = result.getJSONArray("users");
+    JSONObject result0 = array.getJSONObject(0);
 
-    //DBに変更がないこと
-    //assertThat(changes).ofCreation().hasNumberOfChanges(0);
-    //assertThat(changes).ofModification().hasNumberOfChanges(0);
-    //assertThat(changes).ofDeletion().hasNumberOfChanges(0);
+    assertThat(result0.get("id"), equalTo(101));
+    assertThat(result0.get("name"), equalTo("John"));
+    assertThat(result0.get("password"), equalTo("password"));
 
-
+    //TODO 時刻形式揃えたらASSERT追加
   }
 }
