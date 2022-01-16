@@ -71,7 +71,7 @@ class ReadUserTest {
   @Test
   @DatabaseSetup(
           value = {
-                  "/data/ユーザ作成/app_user.xlsx"
+                  "/data/ユーザ一覧取得/app_user.xlsx"
           },
           type = CLEAN_INSERT
   )
