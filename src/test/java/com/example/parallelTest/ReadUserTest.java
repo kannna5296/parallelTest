@@ -27,6 +27,8 @@ import org.springframework.test.web.servlet.ResultActions;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
+import javax.transaction.Transactional;
+
 @SpringBootTest
 @DbUnitConfiguration(
         dataSetLoader = XlsDataSetLoader.class,
@@ -83,7 +85,8 @@ class ReadUserTest {
                     .andDo(log());
 
     String responseString = results.andReturn().getResponse().getContentAsString();
-    JSONObject result = new JSONObject(responseString);
+    //JSONObject result = new JSONObject(responseString);
+    String a  ="ss";
 
     //DBに変更がないこと
     //assertThat(changes).ofCreation().hasNumberOfChanges(0);
