@@ -7,6 +7,8 @@ import com.example.parallelTest.request.UpdateUserRequest;
 import com.example.parallelTest.response.CreateUserResponse;
 import com.example.parallelTest.response.EmptyResponse;
 import java.util.List;
+
+import com.example.parallelTest.response.ReadUserResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -23,8 +25,9 @@ public class UserController {
 
   // READ
   @GetMapping("/user")
-  public ResponseEntity<List<User>> getUser() {
-    return ResponseEntity.ok(userApplicationService.getUsers());
+  public ResponseEntity<ReadUserResponse> getUser() {
+    List<User> users = userApplicationService.getUsers();
+    return ResponseEntity.ok(new ReadUserResponse(users));
   }
 
   // CREATE
