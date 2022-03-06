@@ -45,6 +45,12 @@ dependencies {
 	testImplementation group: 'org.dbunit', name: 'dbunit', version: '2.5.3'
 	implementation 'org.testinfected.hamcrest-matchers:core-matchers:1.5'
 
+	// https://mvnrepository.com/artifact/io.springfox/springfox-swagger2
+	implementation 'io.springfox:springfox-swagger2:2.9.2'
+	// https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui
+	implementation 'io.springfox:springfox-swagger-ui:2.9.2'
+
+
 }
 
 test {
