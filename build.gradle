@@ -33,7 +33,6 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	implementation group: 'javax.persistence', name: 'javax.persistence-api', version: '2.2'
-	implementation 'joda-time:joda-time:2.3'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.flywaydb:flyway-core'
 	testImplementation 'org.junit.jupiter:junit-jupiter:5.5.2'

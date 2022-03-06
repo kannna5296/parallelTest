@@ -1,6 +1,8 @@
 package com.example.parallelTest.entity;
 
+import java.sql.Time;
 import java.sql.Timestamp;
+import java.time.LocalDateTime;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,7 +11,6 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
-import org.joda.time.DateTime;
 
 @Entity
 @Getter
@@ -29,8 +30,8 @@ public class User {
   private String password;
 
   @Column(name = "created_at", nullable = false)
-  private DateTime createdAt;
+  private LocalDateTime createdAt;
 
   @Column(name = "updated_at", nullable = false)
-  private DateTime updatedAt;
+  private LocalDateTime updatedAt;
 }
