@@ -14,6 +14,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@RequestMapping("user")
 public class UserController {
 
   private final UserApplicationService userApplicationService;
@@ -24,14 +25,14 @@ public class UserController {
   }
 
   // READ
-  @GetMapping("/user")
+  @GetMapping("")
   public ResponseEntity<ReadUserResponse> getUser() {
     List<User> users = userApplicationService.getUsers();
     return ResponseEntity.ok(new ReadUserResponse(users));
   }
 
   // CREATE
-  @PostMapping("/user")
+  @PostMapping("")
   public ResponseEntity<CreateUserResponse> createUser(@RequestBody CreateUserRequest req)
       throws Exception {
     User user = userApplicationService.createUser(req.getName(), req.getPassword());
@@ -39,7 +40,7 @@ public class UserController {
   }
 
   // UPDATE
-  @PutMapping("/user")
+  @PutMapping("")
   public ResponseEntity<EmptyResponse> createUser(@RequestBody UpdateUserRequest req)
       throws Exception {
     userApplicationService.updateUser(req.getId(), req.getNewName());
@@ -47,7 +48,7 @@ public class UserController {
   }
 
   // DELETE
-  @DeleteMapping("/user")
+  @DeleteMapping("")
   public ResponseEntity<EmptyResponse> deleteUser(@RequestBody UpdateUserRequest req) {
     userApplicationService.deleteUser(req.getId());
     return ResponseEntity.ok(new EmptyResponse());
