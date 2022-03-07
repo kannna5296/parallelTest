@@ -21,7 +21,7 @@ public class GenerateOasFile {
 
   private static final String DOCS_URL = "/v2/api-docs";
 
-  private static final String DOCS_LOCATION = "build/docs/oas.json";
+  private static final String DOCS_LOCATION = "build/docs/openapi.json";
 
   @Autowired
   protected WebApplicationContext context;
