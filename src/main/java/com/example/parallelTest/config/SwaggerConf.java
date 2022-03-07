@@ -4,7 +4,6 @@ import com.google.common.base.Predicate;
 import com.google.common.base.Predicates;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.service.ApiInfo;
 import springfox.documentation.service.Contact;
@@ -39,16 +38,16 @@ public class SwaggerConf {
     private ApiInfo apiInfo() {
         // http://springfox.github.io/springfox/javadoc/2.6.0/index.html?springfox/documentation/service/ApiInfo.html
         return new ApiInfo(
-                "Sample API"  // APIのタイトル
-                , "このAPIは～～～～です"  // APIの説明
-                , "V1"  // APIのバージョン
+                "My Simple API"  // APIのタイトル
+                , "このAPIは個人開発用で試験的に作ったものです。いわゆるシンプルなCRUDができます。"  // APIの説明
+                , "v1"  // APIのバージョン
                 , "????"    // よくわからない
                 , new Contact(
-                "株式会社XXXXXXX"      // APIに関する連絡先組織・団体等
-                ,"http://XXXXXXXXXXX.co.jp" // APIに関する連絡先組織・団体等のWeb Site Url
-                ,"XXXXXXXX@example.jp")     // APIに関する連絡先組織・団体等のメールアドレス
-                , "API LICENSE" // APIのライセンス
-                , "http://XXXXXXXXXXXX.co.jp"   // APIのライセンスURL
+                "kannna5296"      // APIに関する連絡先組織・団体等
+                ,"xxx" // APIに関する連絡先組織・団体等のWeb Site Url
+                ,"xxx")     // APIに関する連絡先組織・団体等のメールアドレス
+                , "xxx" // APIのライセンス
+                , "xxxx"   // APIのライセンスURL
                 , new ArrayList<VendorExtension>()  // 独自に拡張したいドキュメントがあればここで作成
         );
     }
